@@ -1,0 +1,324 @@
+/*Specification*/
+@font-face {
+    font-family: SilkSerif;
+    src: url("../fonts/Silk Serif Medium.otf");
+}
+
+@font-face {
+    font-family: FuturaLT;
+    src: url("../fonts/FuturaLT-Book.ttf");
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    font-family: FuturaLT, serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul, li {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4 {
+    padding: 0;
+    margin: 0;
+    color:#ffffff;
+    font-weight: 500;
+}
+
+input, button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    font-family: inherit;
+}
+
+
+button {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.5s ease;
+    color: #000;
+    padding-bottom: 6px;
+}
+
+.container {
+    width: 1008px;
+    margin: 0 auto;
+}
+
+/*Menu*/
+
+nav {
+    padding: 26px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logo {
+    background: url("../image/logo.svg") center center/cover no-repeat;
+    width: 160px;
+    height: 32px;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+}
+
+.link {
+    margin-left: 32px;
+}
+
+.link a:hover {
+    border-bottom: 1px solid #C96C53;
+    color: #C96C53;
+}
+
+.link:first-child {
+    margin-left: 0;
+}
+
+.navbar {
+    display: flex;
+}
+
+.mobile-btn {
+    background: url("../image/dots-horizontal.svg") center center/cover no-repeat;
+    width: 48px;
+    height: 48px;
+}
+
+.mobile-nav {
+    position: relative;
+    display: none;
+}
+
+.sub-nav {
+    position: absolute;
+    display: none;
+    width: 100vm;
+    right: 0;
+    background: #FEFDFB;
+    box-shadow: 2px -2px 8px rgba(201, 108, 83, 0.08), -2px 2px 8px rgba(201, 108, 83, 0.12);
+    border-radius: 4px;
+}
+
+.sub-nav.active {
+    display: block;
+}
+
+.sub-nav li {
+    margin: 0 0 18px 0;
+    padding: 10px 32px;
+    display: block;
+}
+
+.user {
+    display: flex;
+    font-family: SilkSerif, serif;
+}
+
+.user-signup {
+    padding: 12px 32px;
+    border: 1px solid #0E655B;
+    border-radius: 8px;
+    color: #0E655B;
+    margin-left: 24px;
+    transition: all 0.5s ease;
+}
+
+.user-signup:hover {
+    background: #0E655B;
+    color: #ffffff;
+}
+
+/*product*/
+
+.products {
+    margin-top: 40px;
+}
+
+.breathwork,
+.tantra {
+    display: flex;
+    justify-content: space-between;
+    font-family: SilkSerif, serif;
+    margin-bottom: 29px;
+    cursor: pointer;
+}
+
+
+.tantra p {
+    font-size: 24px;
+    color: #C96C53;
+    box-shadow: 2px -2px 8px rgba(201, 108, 83, 0.08), -2px 2px 8px rgba(201, 108, 83, 0.12);
+    border-radius: 8px;
+    padding: 32px 0;
+    width: 488px;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+.breathwork p {
+    font-size: 24px;
+    color: #0E655B;
+    box-shadow: 2px -2px 8px rgba(201, 108, 83, 0.08), -2px 2px 8px rgba(201, 108, 83, 0.12);
+    border-radius: 8px;
+    text-align: center;
+    padding: 32px 0;
+    width: 488px;
+    transition: all 0.5s ease;
+}
+
+.other p:hover,
+.breathwork p:hover,
+.tantra p:hover {
+    box-shadow: 2px -2px 8px rgba(201, 108, 83, 0.08), -2px 2px 8px rgba(201, 108, 83, 0.6);
+
+}
+
+.other {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    font-family: SilkSerif, serif;
+    cursor: pointer;
+}
+
+.other p {
+    box-shadow: 2px -2px 8px rgba(201, 108, 83, 0.08), -2px 2px 8px rgba(201, 108, 83, 0.12);
+    border-radius: 8px;
+    padding: 32px;
+    transition: all 0.5s ease;
+}
+
+.user-bag {
+    background: url("../image/placeholder.svg") center center/cover no-repeat;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    cursor: pointer;
+    position: relative;
+}
+
+.uses-bag_item {
+    display: none;
+    position: absolute;
+    border-radius: 99px;
+    top: 12%;
+    left: 50%;
+    width: 18px;
+    height: 18px;
+    box-shadow: 0 4px 8px rgba(201, 108, 83, 0.16), 0px 2px 4px rgba(201, 108, 83, 0.24);
+    background: #C96C53;
+    color: #ffffff;
+    text-align: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.uses-bag_item.active {
+    display: block;
+}
+
+@media (max-width: 1280px) {
+    .mobile-nav {
+        display: block;
+    }
+}
+
+/* Large: 992px - 1199px */
+@media (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+    .breathwork,
+    .tantra {
+      flex-direction: column;
+  }
+    .breathwork p,
+    .tantra p {
+        margin: 0 auto;
+    }
+
+    .breathwork p:first-child,
+    .tantra p:first-child {
+        margin-bottom: 15px;
+    }
+}
+
+/* Medium: 768px - 991px */
+@media (max-width: 991px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+/* Small: 576px - 767px */
+@media (max-width: 767px) {
+    .container {
+        max-width: 540px;
+    }
+
+    .other p,
+    .breathwork p,
+    .tantra p {
+        font-size: 20px;
+        width: 388px;
+    }
+
+    button {
+        font-size: 15px;
+    }
+
+    .user-signup {
+     padding: 10px;
+    }
+}
+
+/* Extra small: 451px - 575px */
+@media (max-width: 575px) {
+    .container {
+        max-width: 370px;
+    }
+
+    other p,
+    .breathwork p,
+    .tantra p {
+        font-size: 18px;
+        width: 338px;
+    }
+
+    .user-signup,
+    .user-login {
+        display: none;
+    }
+}
+
+/* Andrew`s breakpoint: 0px (320px) - 450px */
+@media (max-width: 450px) {
+    .container {
+        max-width: 340px;
+        padding: 50px 0;
+    }
+
+}
