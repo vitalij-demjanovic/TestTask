@@ -62,7 +62,10 @@ function checkMediaQueryBack() {
 
 }
 
-
 window.addEventListener('resize', checkMediaQuery);
 window.addEventListener('resize', checkMediaQueryBack);
+
+window.addEventListener('load', checkMediaQuery);
+window.addEventListener('load', checkMediaQueryBack);
+
 
